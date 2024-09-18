@@ -13,13 +13,26 @@ header {
     
 }
 
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-end;
     text-decoration: none;
 
+}
+
+nav h1{
+    margin: 20px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 nav ul li:hover {
@@ -34,8 +47,9 @@ section p {
 }
 
 nav ul li {
-    margin: 0 15px;
-    text-decoration: none;
+   margin: 0 15px;
+   text-decoration: none;
+   transition: background 0.3s ease-in-out;
 }
 
 nav ul li a {
@@ -44,11 +58,13 @@ nav ul li a {
     display: flex;
     padding: 1rem ;
     justify-content: center;
-    
+
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+nav ul li :hover {
+    text-decoration: none;
+    background: #7a1259;
+    border-radius: 10px;
 }
 
 main {
@@ -72,5 +88,20 @@ footer {
     padding: 10px 0;
     background: #333;
     color: #fff;
+}
+
+.main-image, .kdrama-image, .kmovie-image{
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
